@@ -1,6 +1,6 @@
 #!/bin/bash
 # memoire 
-local number=0;
+number=0;
 
 # programme
 while [ $number -lt 5 ]; do # boucle infinie
