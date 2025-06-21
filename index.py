@@ -1,11 +1,17 @@
 #!/bin/python
 
 import random;
+import sys
 
-# jeu.py
+mode_cheat = False
+if len(sys.argv) > 1 and (sys.argv[1] == "--mode" and sys.argv[2] == "cheet"):
+    mode_cheat = True
+
+# index.py
 nombre_a_trouver = random.randint(1, 100)
 print("Le jeu commence")
-print(nombre_a_trouver)
+if mode_cheat:
+    print(f"[MODE CHEET] Le nombre à trouver est : {nombre_a_trouver}")
 while True:
     reponse = input("Devine le nombre ? ")
 
